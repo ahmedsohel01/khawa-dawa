@@ -1,0 +1,34 @@
+@use "../abstract" as *;
+
+/* About Style*/
+.about {
+  &__area {
+  }
+  &__info {
+  }
+  &__img {
+    position: relative;
+    img {
+      &:first-child {
+        max-width: 480px;
+        @include border(1px, solid, $light-gray);
+      }
+      &:last-child {
+        max-width: 420px;
+        position: absolute;
+        bottom: -150px;
+        right: 50px;
+      }
+    }
+  }
+  &__page {
+    &-img {
+      img {
+        @include border(1px, solid, $light-gray);
+        padding: 2px;
+      }
+    }
+    &-info {
+    }
+  }
+}

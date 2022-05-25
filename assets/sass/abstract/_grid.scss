@@ -1,0 +1,59 @@
+@import "./breakpoints";
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  @media #{$xxl} {
+    width: 1320px;
+  }
+  @media #{$xl} {
+    width: 1140px;
+  }
+  @media #{$lg} {
+    width: 960px;
+  }
+  @media #{$md} {
+    width: 720px;
+  }
+  @media #{$sm} {
+    width: 540px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+//Gutter Space
+@for $i from 1 through 5 {
+  .gutter-#{$i} {
+    row-gap: $i * 10px;
+  }
+}
+
+// Flex Order
+@for $i from 1 through 5 {
+  .order-#{$i} {
+    order: $i;
+  }
+}
+
+//Grid Column
+$grid-column: 12;
+@media #{$xxl} {
+  @for $i from 1 through $grid-column {
+    .col-xxl-#{$i} {
+      width: calc(100% / $grid-column) * $i;
+      padding: 0 15px;
+    }
+  }
+}

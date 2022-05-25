@@ -1,0 +1,25 @@
+@use "../abstract" as *;
+
+/* CTA Style*/
+.cta {
+  &__area {
+    background-color: $primary;
+  }
+  &__info {
+    h3 {
+      font-size: 48px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    a {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}

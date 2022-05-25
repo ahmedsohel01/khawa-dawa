@@ -1,0 +1,52 @@
+/* Justify Content Alignment*/
+$justify-content: start, end, center, space-around, space-between, space-evenly;
+@each $var in $justify-content {
+  .justify-content-#{$var} {
+    justify-content: #{$var};
+  }
+}
+
+/* Align Items Alignment*/
+$align-items: start, end, center, space-around, space-between, space-evenly;
+@each $var in $justify-content {
+  .align-items-#{$var} {
+    align-items: #{$var};
+  }
+}
+
+/* Text Alignment */
+$text-align: left, right, center;
+@each $var in $text-align {
+  .text-#{$var} {
+    text-align: $var;
+  }
+}
+
+/* Margin-Padding */
+/*Margin Top*/
+@for $i from 1 through 20 {
+  .mt-#{$i*5} {
+    margin-top: $i * 5px;
+  }
+}
+
+/*Margin Bottom*/
+@for $i from 1 through 20 {
+  .mb-#{$i*5} {
+    margin-bottom: $i * 5px;
+  }
+}
+
+/*Padding Top*/
+@for $i from 1 through 20 {
+  .pt-#{$i*5} {
+    padding-top: $i * 5px;
+  }
+}
+
+/*Padding Bottom*/
+@for $i from 1 through 20 {
+  .pb-#{$i*5} {
+    padding-bottom: $i * 5px;
+  }
+}

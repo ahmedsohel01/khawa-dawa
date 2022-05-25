@@ -1,0 +1,55 @@
+@use "../abstract" as *;
+
+/* Blog Style*/
+.blog {
+  &__single {
+    background-color: $white;
+    &-img {
+      img {
+        width: 100%;
+      }
+    }
+    &-meta {
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-around;
+      @include border-bottom(1px, dashed, $dark-gray);
+      a {
+        display: block;
+        font-weight: 600;
+        font-style: italic;
+        @include transition(0.3s);
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+    &-info {
+      padding: 20px;
+      h3 {
+        margin-bottom: 5px;
+      }
+      a {
+        display: inline-block;
+        font-weight: 600;
+        position: relative;
+        padding-left: 0;
+        overflow: hidden;
+        @include transition(0.3s);
+        i {
+          display: block;
+          position: absolute;
+          top: 4px;
+          left: -17px;
+        }
+        &:hover {
+          padding-left: 17px;
+          color: $primary;
+          i {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}

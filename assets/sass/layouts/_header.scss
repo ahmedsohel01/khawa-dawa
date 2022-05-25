@@ -1,0 +1,64 @@
+@use "../abstract" as *;
+
+/* Header Style */
+.header {
+  &__area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+  }
+  &__logo {
+  }
+  &__menu {
+    ul {
+      text-align: right;
+      li {
+        display: inline-block;
+        padding: 30px 0;
+        position: relative;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+        a {
+          display: block;
+          font-size: 18px;
+          font-weight: 500;
+          color: $white;
+          @include transition(0.3s);
+        }
+        .submenu {
+          text-align: left;
+          padding: 5px 15px;
+          position: absolute;
+          top: 120%;
+          left: 0;
+          width: 180px;
+          // background-color: $light-gray;
+          // @include border-bottom(2px, solid, $primary);
+          box-shadow: 0px 0px 5px 0px $dark-white;
+          visibility: hidden;
+          opacity: 0;
+          @include transition(0.5s);
+          li {
+            padding: 5px 0;
+            a {
+              // color: $dark-gray;
+            }
+          }
+        }
+        &:hover {
+          & > a {
+            color: $primary !important;
+          }
+          & > .submenu {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+          }
+        }
+      }
+    }
+  }
+}

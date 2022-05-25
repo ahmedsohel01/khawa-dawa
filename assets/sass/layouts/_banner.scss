@@ -1,0 +1,57 @@
+@use "../abstract" as *;
+
+/* Banner Style*/
+.banner {
+  &__slider {
+    &-inner {
+      height: 100vh;
+    }
+    .slick {
+      &-arrow {
+        border: none;
+        outline: none;
+        font-size: 24px;
+        background-color: $primary;
+        color: $white;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 111;
+        cursor: pointer;
+        @include transition(0.3s);
+        &:hover {
+          background-color: $dark-gray;
+        }
+      }
+      &-prev {
+        left: 70px;
+      }
+      &-next {
+        right: 70px;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    h1 {
+      text-transform: capitalize;
+    }
+    h5 {
+      font-size: 32px;
+      font-weight: 600;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+    }
+    a {
+      margin: 0 10px;
+    }
+  }
+}

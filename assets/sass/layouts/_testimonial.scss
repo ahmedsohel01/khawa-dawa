@@ -1,0 +1,54 @@
+@use "../abstract" as *;
+
+/* Testimonial Style*/
+.testimonial {
+  &__slider {
+    &-inner {
+      padding: 0 25px;
+      .client {
+        &__avater {
+          margin-bottom: 15px;
+          img {
+            margin: auto;
+            width: 110px;
+            border-radius: 50%;
+            @include border(1px, dashed, $light-gray);
+            padding: 2px;
+          }
+        }
+        &__info {
+          span {
+            font-size: 14px;
+            display: block;
+            margin-top: -5px;
+          }
+        }
+      }
+    }
+    .slick {
+      &-dots {
+        position: absolute;
+        bottom: -70px;
+        left: 50%;
+        transform: translateX(-50%);
+        li {
+          display: inline-block;
+          margin: 0 5px;
+          &.slick-active {
+            button {
+              background-color: $primary;
+            }
+          }
+          button {
+            text-indent: -99999px;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: $light-gray;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

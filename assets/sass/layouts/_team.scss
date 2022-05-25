@@ -1,0 +1,40 @@
+@use "../abstract" as *;
+
+/* Team Style*/
+.team {
+  &__area {
+  }
+  &__single {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .team__info {
+        bottom: 0;
+      }
+    }
+  }
+  &__avater {
+    img {
+      width: 100%;
+      padding: 1px;
+      @include border(1px, solid, $light-gray);
+    }
+  }
+  &__info {
+    background-color: $dark-gray;
+    padding: 10px;
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+    right: 0;
+    @include transition(0.3s);
+    h4 {
+      font-size: 24px;
+    }
+    span {
+      font-size: 15px;
+      display: block;
+      margin-top: -5px;
+    }
+  }
+}

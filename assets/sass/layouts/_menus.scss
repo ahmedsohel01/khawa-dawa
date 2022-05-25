@@ -1,0 +1,40 @@
+@use "../abstract" as *;
+
+/* Menus Style*/
+.menus {
+  &__area {
+    @include border-top(1px, solid, $light-gray);
+    @include border-bottom(1px, solid, $light-gray);
+  }
+  &__single {
+    @include border(1px, solid, $light-gray);
+    padding: 20px;
+    background-color: $white;
+    &:hover {
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  &__img {
+    margin-right: 20px;
+    img {
+      max-width: 115px;
+      @include transition(0.3s);
+    }
+  }
+  &__info {
+    h4 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      @include border-bottom(1px, dashed, $light-gray);
+      span {
+        float: right;
+        color: $primary;
+        font-style: italic;
+      }
+    }
+  }
+}
