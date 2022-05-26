@@ -10,12 +10,18 @@
       font-size: 25px;
       font-weight: 700;
       margin-bottom: 12px;
+      @include min-lg {
+        font-size: 20px;
+      }
     }
     ul {
       li {
         margin-bottom: 3px;
         padding-bottom: 3px;
         font-weight: 500;
+        @include min-lg {
+          font-size: 14px;
+        }
         i {
           margin-right: 8px;
         }
@@ -35,10 +41,18 @@
     display: flex;
     align-items: center;
   }
+  &__bottom {
+    @include max-xs {
+      margin-top: 15px;
+    }
+  }
   &__social {
     margin-top: 10px;
     padding-top: 20px;
     @include border-top(1px, solid, $light-gray);
+    @include max-xs {
+      text-align: center;
+    }
     a {
       margin-right: 10px;
       @include transition(0.3s);
@@ -51,5 +65,8 @@
     margin-top: 10px;
     padding-top: 20px;
     @include border-top(1px, solid, $light-gray);
+    @include max-xs {
+      text-align: center;
+    }
   }
 }

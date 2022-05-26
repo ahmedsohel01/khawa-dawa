@@ -1,24 +1,14 @@
-@import "./breakpoints";
+// Breackponts
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
 
 .container {
   width: 100%;
-  padding: 0 15px;
+  padding: 0 30px;
   margin: 0 auto;
-  @media #{$xxl} {
-    width: 1320px;
-  }
-  @media #{$xl} {
-    width: 1140px;
-  }
-  @media #{$lg} {
-    width: 960px;
-  }
-  @media #{$md} {
-    width: 720px;
-  }
-  @media #{$sm} {
-    width: 540px;
-  }
 }
 
 .row {
@@ -31,6 +21,82 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+//Grid Column
+$grid-column: 12;
+
+//For min-width 0px
+@for $i from 1 through $grid-column {
+  .col-#{$i} {
+    width: calc(100% / $grid-column) * $i;
+    padding: 0 15px;
+  }
+}
+
+//For min-width 576px
+@media (min-width: $sm) {
+  .container {
+    width: 540px;
+  }
+  @for $i from 1 through $grid-column {
+    .col-sm-#{$i} {
+      width: calc(100% / $grid-column) * $i;
+      padding: 0 15px;
+    }
+  }
+}
+
+//For min-width 768px
+@media (min-width: $md) {
+  .container {
+    width: 720px;
+  }
+  @for $i from 1 through $grid-column {
+    .col-md-#{$i} {
+      width: calc(100% / $grid-column) * $i;
+      padding: 0 15px;
+    }
+  }
+}
+
+//For min-width 992px
+@media (min-width: $lg) {
+  .container {
+    width: 960px;
+  }
+  @for $i from 1 through $grid-column {
+    .col-lg-#{$i} {
+      width: calc(100% / $grid-column) * $i;
+      padding: 0 15px;
+    }
+  }
+}
+
+// For min-width 1200px
+@media (min-width: $xl) {
+  .container {
+    width: 1140px;
+  }
+  @for $i from 1 through $grid-column {
+    .col-xl-#{$i} {
+      width: calc(100% / $grid-column) * $i;
+      padding: 0 15px;
+    }
+  }
+}
+
+// For min-width 1400px
+@media (min-width: $xxl) {
+  .container {
+    width: 1320px;
+  }
+  @for $i from 1 through $grid-column {
+    .col-xxl-#{$i} {
+      width: calc(100% / $grid-column) * $i;
+      padding: 0 15px;
+    }
+  }
 }
 
 //Gutter Space
@@ -47,13 +113,37 @@
   }
 }
 
-//Grid Column
-$grid-column: 12;
-@media #{$xxl} {
-  @for $i from 1 through $grid-column {
-    .col-xxl-#{$i} {
-      width: calc(100% / $grid-column) * $i;
-      padding: 0 15px;
-    }
+/* Responsive Mixin */
+@mixin min-xxl {
+  @media (min-width: $xxl) {
+    @content;
+  }
+}
+@mixin min-xl {
+  @media (min-width: $xl) and (max-width: $xxl) {
+    @content;
+  }
+}
+@mixin min-lg {
+  @media (min-width: $lg) and (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin min-md {
+  @media (min-width: $md) and (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin min-sm {
+  @media (min-width: $sm) and (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin max-xs {
+  @media (max-width: $sm) {
+    @content;
   }
 }

@@ -6,10 +6,19 @@
     background-color: $primary;
   }
   &__info {
+    @include max-xs {
+      text-align: center !important;
+    }
     h3 {
       font-size: 48px;
       font-weight: 700;
       text-transform: uppercase;
+      @include min-md {
+        font-size: 44px;
+      }
+      @include max-xs {
+        font-size: 32px;
+      }
     }
     a {
       display: block;

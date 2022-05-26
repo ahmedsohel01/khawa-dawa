@@ -10,6 +10,16 @@
     @include border(1px, solid, $light-gray);
     padding: 20px;
     background-color: $white;
+    @include min-lg {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    @include max-xs {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
     &:hover {
       img {
         border-radius: 50%;

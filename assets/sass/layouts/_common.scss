@@ -82,12 +82,30 @@ p {
     }
     &-cta {
       font-size: 55px;
+      @include min-lg {
+        font-size: 44px;
+      }
+      @include min-md {
+        font-size: 36px;
+      }
+      @include max-xs {
+        font-size: 26px;
+      }
       span {
         display: inline-block;
         font-family: $oleo;
         font-size: 50px;
         text-transform: uppercase;
         color: $primary;
+        @include min-lg {
+          font-size: 40px;
+        }
+        @include min-md {
+          font-size: 30px;
+        }
+        @include max-xs {
+          font-size: 22px;
+        }
       }
     }
     &-lg {

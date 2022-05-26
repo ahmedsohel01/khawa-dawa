@@ -5,6 +5,9 @@
   &__slider {
     &-inner {
       height: 100vh;
+      @include min-md {
+        height: 75vh;
+      }
     }
     .slick {
       &-arrow {
@@ -43,6 +46,15 @@
     height: 100%;
     h1 {
       text-transform: capitalize;
+      @include min-md {
+        margin-top: -15px;
+        margin-bottom: -30px;
+      }
+      @include max-xs {
+        font-size: 48px;
+        margin-top: -15px;
+        margin-bottom: -30px;
+      }
     }
     h5 {
       font-size: 32px;
@@ -52,6 +64,10 @@
     }
     a {
       margin: 0 10px;
+      @include max-xs {
+        display: block;
+        margin-bottom: 10px;
+      }
     }
   }
 }

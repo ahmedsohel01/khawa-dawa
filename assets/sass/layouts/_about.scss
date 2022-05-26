@@ -2,22 +2,35 @@
 
 /* About Style*/
 .about {
-  &__area {
-  }
-  &__info {
-  }
   &__img {
     position: relative;
     img {
       &:first-child {
         max-width: 480px;
         @include border(1px, solid, $light-gray);
+        @include min-lg {
+          max-width: 100%;
+        }
+        @include max-xs {
+          max-width: 100%;
+        }
       }
       &:last-child {
         max-width: 420px;
         position: absolute;
         bottom: -150px;
         right: 50px;
+        @include min-lg {
+          max-width: 60%;
+        }
+        @include min-md {
+          max-width: 70%;
+          bottom: -50px;
+          right: 0;
+        }
+        @include max-xs {
+          display: none;
+        }
       }
     }
   }
@@ -27,8 +40,6 @@
         @include border(1px, solid, $light-gray);
         padding: 2px;
       }
-    }
-    &-info {
     }
   }
 }

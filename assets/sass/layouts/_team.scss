@@ -2,8 +2,6 @@
 
 /* Team Style*/
 .team {
-  &__area {
-  }
   &__single {
     position: relative;
     overflow: hidden;
@@ -24,7 +22,7 @@
     background-color: $dark-gray;
     padding: 10px;
     position: absolute;
-    bottom: -25%;
+    bottom: -50%;
     left: 0;
     right: 0;
     @include transition(0.3s);
