@@ -16,6 +16,7 @@
       gap: 15px;
     }
     @include max-xs {
+      padding: 10px;
       flex-direction: column;
       align-items: center;
       gap: 15px;
@@ -40,6 +41,9 @@
       margin-bottom: 10px;
       padding-bottom: 10px;
       @include border-bottom(1px, dashed, $light-gray);
+      @include max-xs {
+        font-size: 18px;
+      }
       span {
         float: right;
         color: $primary;

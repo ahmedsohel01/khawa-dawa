@@ -5,6 +5,9 @@
   &__slider {
     &-inner {
       padding: 0 25px;
+      @include max-xs {
+        padding: 0;
+      }
       .client {
         &__avater {
           margin-bottom: 15px;

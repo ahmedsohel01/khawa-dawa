@@ -25,10 +25,16 @@
     }
     &-info {
       padding: 20px;
+      @include max-xs {
+        padding: 15px;
+      }
       li {
         margin-bottom: 5px;
         padding-bottom: 5px;
         font-weight: 600;
+        @include max-xs {
+          font-size: 15px;
+        }
         &:last-child {
           margin-bottom: 0;
           padding-bottom: 0;

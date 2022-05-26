@@ -38,6 +38,9 @@
       h4 {
         font-size: 24px;
         margin: 10px 0;
+        @include max-xs {
+          font-size: 20px;
+        }
       }
     }
   }

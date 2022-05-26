@@ -51,7 +51,7 @@
         margin-bottom: -30px;
       }
       @include max-xs {
-        font-size: 48px;
+        font-size: 40px;
         margin-top: -15px;
         margin-bottom: -30px;
       }
@@ -61,6 +61,9 @@
       font-weight: 600;
       text-transform: capitalize;
       margin-bottom: 20px;
+      @include max-xs {
+        font-size: 20px;
+      }
     }
     a {
       margin: 0 10px;
