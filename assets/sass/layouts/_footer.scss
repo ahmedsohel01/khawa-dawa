@@ -42,6 +42,9 @@
     align-items: center;
   }
   &__bottom {
+    @include min-sm {
+      margin-top: 15px;
+    }
     @include max-xs {
       margin-top: 15px;
     }
@@ -50,6 +53,9 @@
     margin-top: 10px;
     padding-top: 20px;
     @include border-top(1px, solid, $light-gray);
+    @include min-sm {
+      text-align: center;
+    }
     @include max-xs {
       text-align: center;
     }
@@ -65,6 +71,9 @@
     margin-top: 10px;
     padding-top: 20px;
     @include border-top(1px, solid, $light-gray);
+    @include min-sm {
+      text-align: center;
+    }
     @include max-xs {
       text-align: center;
     }

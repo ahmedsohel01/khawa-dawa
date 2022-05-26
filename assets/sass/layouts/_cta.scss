@@ -6,6 +6,9 @@
     background-color: $primary;
   }
   &__info {
+    @include min-sm {
+      text-align: center !important;
+    }
     @include max-xs {
       text-align: center !important;
     }
@@ -14,7 +17,10 @@
       font-weight: 700;
       text-transform: uppercase;
       @include min-md {
-        font-size: 44px;
+        font-size: 46px;
+      }
+      @include min-sm {
+        font-size: 42px;
       }
       @include max-xs {
         font-size: 32px;

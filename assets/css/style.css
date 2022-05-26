@@ -65,6 +65,26 @@ p {
   display: flex;
 }
 
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.order-4 {
+  order: 4;
+}
+
+.order-5 {
+  order: 5;
+}
+
 .col-1 {
   width: 8.3333333333%;
   padding: 0 15px;
@@ -319,6 +339,26 @@ p {
     width: 100%;
     padding: 0 15px;
   }
+
+  .order-lg-1 {
+    order: 1;
+  }
+
+  .order-lg-2 {
+    order: 2;
+  }
+
+  .order-lg-3 {
+    order: 3;
+  }
+
+  .order-lg-4 {
+    order: 4;
+  }
+
+  .order-lg-5 {
+    order: 5;
+  }
 }
 @media (min-width: 1200px) {
   .container {
@@ -468,26 +508,6 @@ p {
 
 .gutter-5 {
   row-gap: 50px;
-}
-
-.order-1 {
-  order: 1;
-}
-
-.order-2 {
-  order: 2;
-}
-
-.order-3 {
-  order: 3;
-}
-
-.order-4 {
-  order: 4;
-}
-
-.order-5 {
-  order: 5;
 }
 
 /* Responsive Mixin */
@@ -1069,6 +1089,7 @@ p {
   left: 0;
   right: 0;
   z-index: 111;
+  display: none;
 }
 .header__menu ul {
   text-align: right;
@@ -1554,6 +1575,11 @@ p {
 .cta__area {
   background-color: #ff3636;
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .cta__info {
+    text-align: center !important;
+  }
+}
 @media (max-width: 576px) {
   .cta__info {
     text-align: center !important;
@@ -1566,7 +1592,12 @@ p {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .cta__info h3 {
-    font-size: 44px;
+    font-size: 46px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .cta__info h3 {
+    font-size: 42px;
   }
 }
 @media (max-width: 576px) {
@@ -1784,6 +1815,11 @@ p {
   display: flex;
   align-items: center;
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .footer__bottom {
+    margin-top: 15px;
+  }
+}
 @media (max-width: 576px) {
   .footer__bottom {
     margin-top: 15px;
@@ -1793,6 +1829,11 @@ p {
   margin-top: 10px;
   padding-top: 20px;
   border-top: 1px solid #ddd;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .footer__social {
+    text-align: center;
+  }
 }
 @media (max-width: 576px) {
   .footer__social {
@@ -1812,6 +1853,11 @@ p {
   margin-top: 10px;
   padding-top: 20px;
   border-top: 1px solid #ddd;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .footer__copy {
+    text-align: center;
+  }
 }
 @media (max-width: 576px) {
   .footer__copy {

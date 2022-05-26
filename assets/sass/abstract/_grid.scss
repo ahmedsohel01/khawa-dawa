@@ -23,6 +23,12 @@ $sm: 576px;
   display: flex;
 }
 
+// Flex Order
+@for $i from 1 through 5 {
+  .order-#{$i} {
+    order: $i;
+  }
+}
 //Grid Column
 $grid-column: 12;
 
@@ -71,6 +77,12 @@ $grid-column: 12;
       padding: 0 15px;
     }
   }
+  // Flex Order
+  @for $i from 1 through 5 {
+    .order-lg-#{$i} {
+      order: $i;
+    }
+  }
 }
 
 // For min-width 1200px
@@ -103,13 +115,6 @@ $grid-column: 12;
 @for $i from 1 through 5 {
   .gutter-#{$i} {
     row-gap: $i * 10px;
-  }
-}
-
-// Flex Order
-@for $i from 1 through 5 {
-  .order-#{$i} {
-    order: $i;
   }
 }
 
