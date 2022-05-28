@@ -7,7 +7,7 @@ $justify-content: start, end, center, space-around, space-between, space-evenly;
 }
 
 /* Align Items Alignment*/
-$align-items: start, end, center, space-around, space-between, space-evenly;
+$align-items: start, end, center;
 @each $var in $justify-content {
   .align-items-#{$var} {
     align-items: #{$var};

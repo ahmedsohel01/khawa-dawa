@@ -19,6 +19,9 @@ p {
     margin-bottom: 10px;
   }
 }
+.fix {
+  overflow: hidden;
+}
 /*Text Color*/
 .text-white {
   color: $white;

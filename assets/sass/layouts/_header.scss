@@ -8,11 +8,11 @@
     left: 0;
     right: 0;
     z-index: 111;
-    display: none;
-  }
-  &__logo {
   }
   &__menu {
+    @include min-md {
+      display: none;
+    }
     ul {
       text-align: right;
       li {
@@ -62,4 +62,116 @@
       }
     }
   }
+}
+
+/* Sidebar Style*/
+.sidebar {
+  &__area {
+    position: fixed;
+    top: 0;
+    right: -480px;
+    z-index: 9999;
+    height: 100%;
+    width: 450px;
+    background-color: $dark-gray;
+    overflow-y: scroll;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(0.3s);
+    @include max-xs {
+      width: 100%;
+    }
+    &.opend {
+      opacity: 1;
+      visibility: visible;
+      right: 0;
+    }
+  }
+  &__wrapper {
+    padding: 20px 45px;
+    position: relative;
+  }
+  &__content {
+  }
+  &__logo {
+    padding-bottom: 30px;
+    @include border-bottom(1px, solid, $light-gray);
+  }
+  &__toggle {
+    display: none;
+    @include min-md {
+      display: block;
+      padding: 20px 0;
+    }
+    &-btn {
+      display: inline-block;
+      font-size: 18px;
+      height: 45px;
+      width: 45px;
+      line-height: 45px;
+      background-color: $primary;
+      color: $white;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      cursor: pointer;
+      @include transition(0.3s);
+      &:hover {
+        background-color: $dark-white;
+        color: $primary;
+      }
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 18px;
+    right: 45px;
+    &-btn {
+      display: inline-block;
+      font-size: 18px;
+      height: 45px;
+      width: 45px;
+      line-height: 45px;
+      background-color: $primary;
+      color: $white;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      cursor: pointer;
+      @include transition(0.3s);
+      &:hover {
+        background-color: $dark-white;
+        color: $primary;
+      }
+    }
+  }
+}
+
+/*Mobile MEnu CSS*/
+.mean-container .mean-nav > ul {
+  display: block !important;
+}
+.mean-container .mean-bar {
+  padding: 0;
+}
+.meanmenu-reveal {
+  display: none !important;
+}
+.mean-container .mean-nav {
+  margin-top: 0;
+}
+.mean-container .mean-nav ul li a {
+  border: none;
+}
+.mean-container .mean-nav ul li li a {
+  border: none;
+}
+.submenu li {
+  margin-left: 15px;
+}
+.mean-container .mean-nav ul li a.mean-expand {
+  border: none !important;
+  margin: 0;
+  cursor: pointer;
+  background: none;
 }

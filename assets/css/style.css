@@ -215,6 +215,20 @@ p {
     width: 720px;
   }
 
+  .d-md-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .justify-content-md-space-between {
+    justify-content: space-between;
+  }
+
+  .align-items-md-center {
+    align-items: center;
+  }
+
   .col-md-1 {
     width: 8.3333333333%;
     padding: 0 15px;
@@ -924,6 +938,10 @@ p {
   }
 }
 
+.fix {
+  overflow: hidden;
+}
+
 /*Text Color*/
 .text-white {
   color: #fff;
@@ -1089,7 +1107,11 @@ p {
   left: 0;
   right: 0;
   z-index: 111;
-  display: none;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .header__menu {
+    display: none;
+  }
 }
 .header__menu ul {
   text-align: right;
@@ -1137,6 +1159,131 @@ p {
   top: 100%;
 }
 
+/* Sidebar Style*/
+.sidebar__area {
+  position: fixed;
+  top: 0;
+  right: -480px;
+  z-index: 9999;
+  height: 100%;
+  width: 450px;
+  background-color: #333;
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 576px) {
+  .sidebar__area {
+    width: 100%;
+  }
+}
+.sidebar__area.opend {
+  opacity: 1;
+  visibility: visible;
+  right: 0;
+}
+.sidebar__wrapper {
+  padding: 20px 45px;
+  position: relative;
+}
+.sidebar__logo {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+.sidebar__toggle {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidebar__toggle {
+    display: block;
+    padding: 20px 0;
+  }
+}
+.sidebar__toggle-btn {
+  display: inline-block;
+  font-size: 18px;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  background-color: #ff3636;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar__toggle-btn:hover {
+  background-color: #f2f2f2;
+  color: #ff3636;
+}
+.sidebar__close {
+  position: absolute;
+  top: 18px;
+  right: 45px;
+}
+.sidebar__close-btn {
+  display: inline-block;
+  font-size: 18px;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  background-color: #ff3636;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar__close-btn:hover {
+  background-color: #f2f2f2;
+  color: #ff3636;
+}
+
+/*Mobile MEnu CSS*/
+.mean-container .mean-nav > ul {
+  display: block !important;
+}
+
+.mean-container .mean-bar {
+  padding: 0;
+}
+
+.meanmenu-reveal {
+  display: none !important;
+}
+
+.mean-container .mean-nav {
+  margin-top: 0;
+}
+
+.mean-container .mean-nav ul li a {
+  border: none;
+}
+
+.mean-container .mean-nav ul li li a {
+  border: none;
+}
+
+.submenu li {
+  margin-left: 15px;
+}
+
+.mean-container .mean-nav ul li a.mean-expand {
+  border: none !important;
+  margin: 0;
+  cursor: pointer;
+  background: none;
+}
+
 /* Breadcrumb Style*/
 .breadcrumb__area {
   padding-top: 150px;
@@ -1170,9 +1317,24 @@ p {
 .banner__slider-inner {
   height: 100vh;
 }
+@media (min-width: 992px) and (max-width: 1200px) {
+  .banner__slider-inner {
+    height: 90vh;
+  }
+}
 @media (min-width: 768px) and (max-width: 992px) {
   .banner__slider-inner {
     height: 75vh;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .banner__slider-inner {
+    height: 70vh;
+  }
+}
+@media (max-width: 576px) {
+  .banner__slider-inner {
+    height: 60vh;
   }
 }
 .banner__slider .slick-arrow {
@@ -1219,6 +1381,13 @@ p {
     margin-bottom: -30px;
   }
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .banner__content h1 {
+    font-size: 48px;
+    margin-top: -10px;
+    margin-bottom: -20px;
+  }
+}
 @media (max-width: 576px) {
   .banner__content h1 {
     font-size: 40px;
@@ -1231,6 +1400,11 @@ p {
   font-weight: 600;
   text-transform: capitalize;
   margin-bottom: 20px;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .banner__content h5 {
+    font-size: 28px;
+  }
 }
 @media (max-width: 576px) {
   .banner__content h5 {
