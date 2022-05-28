@@ -58,17 +58,6 @@ $grid-column: 12;
   .container {
     width: 720px;
   }
-  .d-md-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .justify-content-md-space-between {
-    justify-content: space-between;
-  }
-  .align-items-md-center {
-    align-items: center;
-  }
   @for $i from 1 through $grid-column {
     .col-md-#{$i} {
       width: calc(100% / $grid-column) * $i;
@@ -81,6 +70,9 @@ $grid-column: 12;
 @media (min-width: $lg) {
   .container {
     width: 960px;
+  }
+  .d-lg-block {
+    display: block;
   }
   @for $i from 1 through $grid-column {
     .col-lg-#{$i} {

@@ -103,6 +103,14 @@
       display: block;
       padding: 20px 0;
     }
+    @include min-sm {
+      display: block;
+      padding: 20px 0;
+    }
+    @include max-xs {
+      display: block;
+      padding: 20px 0;
+    }
     &-btn {
       display: inline-block;
       font-size: 18px;
