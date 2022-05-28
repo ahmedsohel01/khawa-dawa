@@ -26,10 +26,17 @@ jQuery(document).ready(function () {
   // Mobile Menu Sidebar Opend
   $(".sidebar__toggle-btn").on("click", () => {
     $(".sidebar__area").addClass("opend");
+    $(".body-overlay").addClass("opend");
   });
   // Mobile Menu Sidebar Closed
   $(".sidebar__close-btn").on("click", () => {
     $(".sidebar__area").removeClass("opend");
+    $(".body-overlay").removeClass("opend");
+  });
+  // Body Overlay Click
+  $(".body-overlay").on("click", () => {
+    $(".sidebar__area").removeClass("opend");
+    $(".body-overlay").removeClass("opend");
   });
 
   // Banner Slider Activation

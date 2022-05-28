@@ -44,9 +44,6 @@
           @include transition(0.5s);
           li {
             padding: 5px 0;
-            a {
-              // color: $dark-gray;
-            }
           }
         }
         &:hover {
@@ -90,8 +87,6 @@
   &__wrapper {
     padding: 20px 45px;
     position: relative;
-  }
-  &__content {
   }
   &__logo {
     padding-bottom: 30px;
@@ -156,30 +151,43 @@
 }
 
 /*Mobile MEnu CSS*/
-.mean-container .mean-nav > ul {
-  display: block !important;
-}
-.mean-container .mean-bar {
-  padding: 0;
+.mean-container {
+  .mean-bar {
+    padding: 0;
+  }
+  .mean-nav {
+    margin-top: 0;
+    & > ul {
+      display: block !important;
+      li {
+        &:hover {
+          & > a {
+            color: $primary;
+            background: none;
+          }
+        }
+        a {
+          font-family: $montserrat;
+          font-size: 18px;
+          font-weight: 500;
+          border: none;
+          &.mean-expand {
+            border: none !important;
+            margin: 0;
+            cursor: pointer;
+            background: none;
+          }
+        }
+        li {
+          margin-left: 15px;
+          a {
+            border: none;
+          }
+        }
+      }
+    }
+  }
 }
 .meanmenu-reveal {
   display: none !important;
-}
-.mean-container .mean-nav {
-  margin-top: 0;
-}
-.mean-container .mean-nav ul li a {
-  border: none;
-}
-.mean-container .mean-nav ul li li a {
-  border: none;
-}
-.submenu li {
-  margin-left: 15px;
-}
-.mean-container .mean-nav ul li a.mean-expand {
-  border: none !important;
-  margin: 0;
-  cursor: pointer;
-  background: none;
 }
